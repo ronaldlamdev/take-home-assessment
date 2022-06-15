@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import StudentCard from "./StudentCard";
 
 const url = 'https://api.hatchways.io/assessment/students';
 
@@ -10,15 +11,19 @@ const App = () => {
   const getStudents = async () => {
     const response = await fetch(url);
     const data = await response.json();
-    setStudent(data);
+    setStudent(data.students);
   }
+
+  useEffect(( () =>
+  getStudents('')
+  ), [])
 
   return (
     <div className="app">
-      <button onClick={getStudents}>Click Me</button>
+      {students.length > 0 ? 
       <div className="container">
-        
-      </div>
+        {students.map((student) => <StudentCard student={student}/>)}
+      </div> : <>No students found</>}
     </div>
   )
 }
