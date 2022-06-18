@@ -14,15 +14,16 @@ const App = () => {
     setStudent(data.students);
   }
 
-  useEffect(( () =>
-  getStudents('')
+  useEffect(( () => {
+    getStudents()
+  }
   ), [])
 
   return (
     <div className="app">
       {students.length > 0 ? 
       <div className="container">
-        {students.map((student) => <StudentCard student={student}/>)}
+        {students.map((student) => <StudentCard key={student.id} student={student}/>)}
       </div> : <>No students found</>}
     </div>
   )

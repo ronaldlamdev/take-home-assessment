@@ -1,8 +1,9 @@
 import React from "react";
 
 const studentCard = ({student}) => {
+
   return (
-  <div className="student-card">
+  <div className="student-card" key={student.id}>
     <img className="student-image" src={student.pic} alt="pic"/>
     <h1 className="student-name">{student.firstName} {student.lastName}</h1>
     <p className="email">Email: {student.email}</p>
