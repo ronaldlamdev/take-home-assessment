@@ -15,7 +15,7 @@ const studentCard = ({student}) => {
     <p className="email">Email: {student.email}</p>
     <p className="company-name">Company: {student.company}</p>
     <p className="skill">Skill: {student.skill}</p>
-    <p className="average">Average: <AvgGrade/></p>
+    <p className="average">Average: <AvgGrade/>%</p>
   </div>
   )
 };
