@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import StudentCard from "./StudentCard";
+import './App.css'
 
 const url = 'https://api.hatchways.io/assessment/students';
 
@@ -15,7 +16,7 @@ const App = () => {
   }
 
   useEffect(( () => {
-    getStudents()
+    getStudents();
   }
   ), [])
 
