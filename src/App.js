@@ -20,11 +20,25 @@ const App = () => {
   }
   ), [])
 
+
+  
+    const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div className="app">
+      <div className="search-container">
+        <input type='text' placeholder="Search..." 
+        onChange={event => {setSearchTerm(event.target.value)}}/>
+      </div>
       {students.length > 0 ? 
       <div className="container">
-        {students.map((student) => <StudentCard key={student.id} student={student}/>)}
+        {students.filter((student) => {
+          if (searchTerm === "") {
+            return student
+          } else if (student.firstName.toLowerCase().includes(searchTerm.toLowerCase())) {
+            return student
+          }
+        }).map((student) => <StudentCard key={student.id} student={student}/>)}
       </div> : <>No students found</>}
     </div>
   )

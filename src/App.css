@@ -10,12 +10,39 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Search bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  width: 100%;
+}
+
+.search-container input {
+  width: 50%;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 16rem;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.search-container input::placeholder {
+  text-align: center;
+}
+
 /* Student Card */
 .student-card {
-  border-bottom: 1px solid gray;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  border-bottom: 1px solid gray;
   gap: 2rem;
   padding: .5rem;
 }
