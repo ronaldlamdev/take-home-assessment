@@ -8,6 +8,15 @@ const studentCard = ({student}) => {
     return average;
   }
 
+  const DisplayTestGrades = () => {
+    const testGradesList = document.querySelector('.test-grades-list');
+    if (testGradesList.style.display === "none") {
+      testGradesList.style.display = "block";
+    } else {
+      testGradesList.style.display = "none";
+    }
+  }
+
   return (
   <div className="student-card">
     <img className="student-image" src={student.pic} alt="pic"/>
@@ -30,6 +39,7 @@ const studentCard = ({student}) => {
         </ul> 
       </div> 
     </div>
+    <button onClick={DisplayTestGrades}>Display/Close</button>
   </div>
   )
 };
