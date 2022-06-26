@@ -83,3 +83,15 @@
   margin-left: .75rem;
 }
 
+label {
+  color: gray;
+  margin-left: .75rem;
+}
+
+.display-close {
+  margin: 1rem 0 0 .5rem;
+}
+
+.display-close:checked ~ ul {
+  display: block;
+}

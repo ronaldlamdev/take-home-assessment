@@ -19,8 +19,6 @@ const App = () => {
     getStudents();
   }
   ), [])
-
-
   
     const [searchTerm, setSearchTerm] = useState('');
 

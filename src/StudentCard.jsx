@@ -8,15 +8,6 @@ const studentCard = ({student}) => {
     return average;
   }
 
-  const DisplayTestGrades = () => {
-    const testGradesList = document.querySelector('.test-grades-list');
-    if (testGradesList.style.display === "none") {
-      testGradesList.style.display = "block";
-    } else {
-      testGradesList.style.display = "none";
-    }
-  }
-
   return (
   <div className="student-card">
     <img className="student-image" src={student.pic} alt="pic"/>
@@ -27,6 +18,9 @@ const studentCard = ({student}) => {
         <p className="company-name">Company: {student.company}</p>
         <p className="skill">Skill: {student.skill}</p>
         <p className="average">Average: <AvgGrade/>%</p>
+        <label>Show test scores</label>
+        <input type="checkbox" className="display-close">
+        </input>
         <ul className="test-grades-list">
           <li>Test 1: <span>{student.grades[0]}%</span></li>
           <li>Test 2: <span>{student.grades[1]}%</span></li>
@@ -39,7 +33,6 @@ const studentCard = ({student}) => {
         </ul> 
       </div> 
     </div>
-    <button onClick={DisplayTestGrades}>Display/Close</button>
   </div>
   )
 };
