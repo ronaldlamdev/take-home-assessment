@@ -10,6 +10,7 @@
   font-family: 'Raleway', sans-serif;
 }
 
+/* set whole document display to flex */
 .app {
   display: flex;
   justify-content: center;
@@ -56,6 +57,7 @@
   margin-left: 1rem;
 }
 
+/* Styling info such as email, average, etc. */
 .more-info-container {
   margin-top: .5rem;
 }
@@ -90,6 +92,7 @@ label {
 
 .display-close {
   margin: 1rem 0 0 .5rem;
+  align-self: flex-end;
 }
 
 .display-close:checked ~ ul {
