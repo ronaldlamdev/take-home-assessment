@@ -100,3 +100,30 @@ label {
 .display-close:checked ~ ul {
   display: block;
 }
+
+/* tags */
+.tags-container {
+  margin-left: 1rem;
+  padding: 15px 0 0;
+}
+
+.tags-input {
+  margin-top: 1rem;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding: 7px 0;
+  outline: 0;
+  font-size: .8rem;
+  color: gray;
+}
+
+.tag {
+  list-style: none;
+  background-color: lightgray;
+  width: fit-content;
+  padding: .5rem;
+  margin-bottom: .6rem;
+}
+
+
+

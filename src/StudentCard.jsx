@@ -48,13 +48,13 @@ const StudentCard = ({student}) => {
         {/* Tags */}
         <ul>
           {tags.map((tag, index) => (
-            <li key={index}>
+            <li className="tag" key={index}>
               <span>{tag}</span>
             </li>
           ))}
         </ul>
         {/* Input */}
-        <input type="text" placeholder="Add a tag" onKeyUp={e => (e.key === "Enter" ? AddTags(e) : null)}></input>
+        <input type="text" className="tags-input" placeholder="Add a tag" onKeyUp={e => (e.key === "Enter" ? AddTags(e) : null)}></input>
       </div>
     </div>
   </div>

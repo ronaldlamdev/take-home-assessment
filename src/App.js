@@ -25,7 +25,7 @@ const App = () => {
     <div className="app">
       <div className="search-container">
         <input type='text' placeholder="Search by name" 
-        onChange={event => {setSearchStudent(event.target.value)}}/>
+        onChange={e => {setSearchStudent(e.target.value)}}/>
       </div>
       {students.length > 0 ? 
       <div className="container">
