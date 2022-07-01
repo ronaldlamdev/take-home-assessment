@@ -8,6 +8,7 @@ const url = 'https://api.hatchways.io/assessment/students';
 const App = () => {
 
   const [students, setStudent] = useState([]);
+  const [searchStudent, setSearchStudent] = useState('');
 
   const getStudents = async () => {
     const response = await fetch(url);
@@ -20,21 +21,21 @@ const App = () => {
   }
   ), [])
   
-    const [searchTerm, setSearchTerm] = useState('');
-
   return (
     <div className="app">
       <div className="search-container">
-        <input type='text' placeholder="Search..." 
-        onChange={event => {setSearchTerm(event.target.value)}}/>
+        <input type='text' placeholder="Search by name" 
+        onChange={event => {setSearchStudent(event.target.value)}}/>
       </div>
       {students.length > 0 ? 
       <div className="container">
         {students.filter((student) => {
-          if (searchTerm === "") {
-            return student
-          } else if (student.firstName.toLowerCase().includes(searchTerm.toLowerCase())) {
-            return student
+          if (searchStudent === "") {
+            return student;
+          } else if (student.firstName.toLowerCase().includes(searchStudent.toLowerCase())) {
+            return student;
+          } else {
+            return null;
           }
         }).map((student) => <StudentCard key={student.id} student={student}/>)}
       </div> : <>No students found</>}
