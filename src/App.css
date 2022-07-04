@@ -23,7 +23,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 1rem;
   margin: 2rem;
   width: 100%;
 }

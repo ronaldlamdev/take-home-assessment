@@ -49,7 +49,7 @@ const StudentCard = ({student}) => {
         <ul>
           {tags.map((tag, index) => (
             <li className="tag" key={index}>
-              <span>{tag}</span>
+              <span className="tag-text">{tag}</span>
             </li>
           ))}
         </ul>
