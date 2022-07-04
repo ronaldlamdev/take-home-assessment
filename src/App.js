@@ -43,7 +43,7 @@ const App = () => {
         }).map((student) => <StudentCard key={student.id} student={student}/>)}
       </div> : <>No students found</>}
     </div>
-  )
+  );
 }
 
 export default App;
